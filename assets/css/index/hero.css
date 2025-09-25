@@ -1,92 +1,200 @@
-/* Reset & Base */
+:root {
+  --primary: #08275e; /* Blue */
+  --dark: #1e293b;
+  --gray: #64748b;
+  --bg-light: #f9fafc;
+  --font: "Inter", sans-serif;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 body {
-  font-family: "Segoe UI", Tahoma, sans-serif;
-  color: #111;
+  font-family: var(--font);
+  color: var(--dark);
   background: #fff;
-  line-height: 1.5;
 }
 
-/* Header */
-.navbar {
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* Container */
+.container {
+  width: min(90%, 1200px);
+  margin-inline: auto;
+}
+
+/* Topbar */
+.topbar {
+  background: var(--primary);
+  color: #fff;
+  font-size: 0.9rem;
+}
+.topbar-inner {
   display: flex;
   justify-content: space-between;
+  padding: 8px 0;
+}
+.topbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav-inner {
+  display: flex;
   align-items: center;
-  padding: 20px 8%;
+  justify-content: space-between;
+  padding: 1rem 0;
 }
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #4f46e5;
 }
-.navbar ul {
+.logo .dot {
+  color: var(--primary);
+}
+.nav-links {
   list-style: none;
   display: flex;
-  gap: 2rem;
+  gap: 1.5rem;
 }
-.navbar a {
+.nav-links a {
   text-decoration: none;
-  color: #333;
+  color: var(--dark);
+  font-weight: 500;
+}
+.nav-actions {
+  display: flex;
+  gap: 1rem;
+}
+.signin {
+  color: var(--dark);
+  text-decoration: none;
+}
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 0;
+}
+.hero-text {
+  flex: 1 1 400px;
+}
+.tagline {
+  color: #a31717;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.hero-text h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.highlight {
+  color: #a31717;
+}
+.desc {
+  color: var(--gray);
+  margin-bottom: 1.5rem;
+  max-width: 480px;
+}
+.hero-buttons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.see-work {
+  text-decoration: none;
+  color: var(--dark);
   font-weight: 500;
 }
 
-/* Hero Section */
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px 8%;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-.hero-text {
-  flex: 1 1 380px;
-}
-.hero-text h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-.hero-text h1 span {
-  color: #4f46e5;
-}
-.hero-text p {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-  max-width: 420px;
-}
-
-/* Store Buttons */
-.store-buttons {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-.store-btn img {
-  height: 48px;
-}
-
-/* Image */
+/* Hero Image */
 .hero-image {
-  flex: 1 1 300px;
-  text-align: center;
+  flex: 1 1 320px;
+  display: flex;
+  justify-content: center;
 }
-.hero-image img {
-  max-width: 280px;
+.image-wrapper {
+  position: relative;
+  background: #e0e7ff;
+  border-radius: 1rem;
+  padding: 1rem;
+  width: min(100%, 340px);
+}
+.image-wrapper img {
+  display: block;
   width: 100%;
+  border-radius: 1rem;
+}
+.badge {
+  position: absolute;
+  background: #fff;
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+}
+.patients {
+  top: 15%;
+  left: -40px;
+}
+.doctors {
+  bottom: 15%;
+  right: -40px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero {
+/* Responsive Navigation */
+@media (max-width: 900px) {
+  .nav-links {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    background: #fff;
     flex-direction: column;
-    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+    transform: translateY(-200%);
+    transition: transform 0.3s ease;
   }
-  .hero-text h1 {
-    font-size: 2.3rem;
+  .nav-links.open {
+    transform: translateY(0);
+  }
+  .hamburger {
+    display: block;
+  }
+  .nav-actions {
+    display: none;
   }
 }

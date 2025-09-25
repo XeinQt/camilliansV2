@@ -1,0 +1,58 @@
+/* Mission & Vision Section */
+.mission-vision {
+  background: #f9fafc;
+  padding: 4rem 0;
+  text-align: center;
+}
+.mv-header .tagline {
+  color: #a31717;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.mv-header h2 {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+.mv-header .highlight {
+  color: var(--primary);
+}
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.mv-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+.mv-card:hover {
+  transform: translateY(-5px);
+}
+.mv-icon {
+  background: #e0e7ff;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: var(--primary);
+}
+.mv-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.mv-card p {
+  color: var(--gray);
+  line-height: 1.6;
+  font-size: 1rem;
+}

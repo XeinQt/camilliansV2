@@ -1,0 +1,67 @@
+/* Services Cards Section */
+.services-cards {
+  padding: 4rem 0;
+  background: #fff;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: #d9e0eb; /* default blue background tint */
+  border: 3px solid #0a2b63; /* default blue border */
+  border-radius: 1rem;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.service-card .icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #0a2b63; /* default blue icon */
+}
+
+.service-card h3 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #0a2b63;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+/* Red variation */
+.service-card.red {
+  background: #f6dcdc;
+  border-color: #b11212;
+}
+.service-card.red .icon,
+.service-card.red h3 {
+  color: #b11212;
+}
+
+/* Blue variation (explicit if you need) */
+.service-card.blue {
+  background: #d9e0eb;
+  border-color: #0a2b63;
+}
+.service-card.blue .icon,
+.service-card.blue h3 {
+  color: #0a2b63;
+}
+
+/* Responsive spacing */
+@media (max-width: 768px) {
+  .service-card {
+    padding: 2.5rem 1rem;
+  }
+}

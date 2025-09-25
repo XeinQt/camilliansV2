@@ -3,53 +3,152 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Finance Landing</title>
+    <title>Doctor Landing Page</title>
     <link rel="stylesheet" href="assets/css/index/hero.css" />
+    <link rel="stylesheet" href="assets/css/index/missionVission.css" />
+    <link rel="stylesheet" href="assets/css/index/services.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
   </head>
   <body>
-    <header class="navbar">
-      <div class="logo">Finapp</div>
-      <nav>
-        <ul>
-          <li><a href="#">Invest</a></li>
-          <li><a href="#">Plans</a></li>
-          <li><a href="#">Guide</a></li>
-          <li><a href="#">Features</a></li>
-        </ul>
-      </nav>
+    <!-- Top Bar -->
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <span>Sun – Mon 10:30 am to 9:30 pm</span>
+        <div class="topbar-right">
+          <a href="mailto:example@gmail.com">fax@camillianshhs.com</a>
+          <a href="tel:+8326496092">+832-649-6092</a>
+        </div>
+      </div>
     </header>
 
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Personal finance,<br /><span>reimagined</span></h1>
-        <p>
-          Download the Finapp mobile app today and take control of your money.
-        </p>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="container nav-inner">
+        <div class="logo">
+          <img src="assets/img/logo.png" alt="logo" />
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="why.html">Why Camillians?</a></li>
+          <li><a href="aboutUs.html">About Us</a></li>
+          <li><a href="carrer.html">Careers</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <button class="hamburger" aria-label="Menu">☰</button>
+      </div>
+    </nav>
 
-        <div class="store-buttons">
-          <a href="#" class="store-btn">
-            <img
-              src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-              alt="App Store"
-            />
-          </a>
-          <a href="#" class="store-btn">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-              alt="Google Play"
-            />
-          </a>
+    <!-- Hero Section -->
+    <section class="hero container">
+      <div class="hero-text">
+        <p class="tagline">— Your Health, Our Priority</p>
+        <h1>
+          COMMITTED TO <span class="highlight">PROVIDING</span> YOU WITH THE
+          BEST CARE
+        </h1>
+        <p class="desc">
+          Here, skilled and compassionate healthcare can happen in the comfort
+          of your own home.
+        </p>
+        <div class="hero-buttons">
+          <a href="tel:+8326496092" class="btn-primary">Call Now</a>
+          <a href="#" class="see-work">See How We Work →</a>
         </div>
       </div>
 
       <div class="hero-image">
-        <img src="phone-mockup.png" alt="App screenshot" />
-        <!-- replace phone-mockup.png with your own transparent phone image -->
+        <div class="image-wrapper">
+          <img src="assets/img/doctor.png" alt="Doctor" />
+          <div class="badge patients">10k+ Patients</div>
+          <div class="badge doctors">800+ Doctors</div>
+        </div>
       </div>
     </section>
+
+    <section class="services-cards">
+      <div class="container card-grid">
+        <div class="service-card blue">
+          <div class="icon">
+            <i class="fas fa-user-nurse"></i>
+          </div>
+          <h3>Skilled Nursing Services</h3>
+        </div>
+
+        <div class="service-card red">
+          <div class="icon">
+            <i class="fas fa-running"></i>
+          </div>
+          <h3>Physical / Occupational / Speech Therapy</h3>
+        </div>
+
+        <div class="service-card blue">
+          <div class="icon">
+            <i class="fas fa-hand-holding-medical"></i>
+          </div>
+          <h3>Home Health Aide Services</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="mission-vision">
+      <div class="container mv-header">
+        <p class="tagline">— Our Goals</p>
+        <h2>
+          <span class="highlight">Mission</span> &
+          <span class="highlight">Vision</span>
+        </h2>
+      </div>
+
+      <div class="container mv-grid">
+        <div class="mv-card">
+          <div class="mv-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3>Our Mission</h3>
+          <p>
+            We strive to help as many people as possible, giving a helping hand
+            to our patients as well as case managers, social workers, hospitals,
+            clinics, and communities.
+          </p>
+        </div>
+
+        <div class="mv-card">
+          <div class="mv-icon">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3>Our Vision</h3>
+          <p>
+            We strive to be a leading provider of a wide range of quality home
+            healthcare services. Our team is committed to providing innovative,
+            professional, and compassionate care to the communities we serve.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Mobile nav toggle
+      const hamburger = document.querySelector(".hamburger");
+      const navLinks = document.querySelector(".nav-links");
+      hamburger.addEventListener("click", () =>
+        navLinks.classList.toggle("open")
+      );
+    </script>
   </body>
 </html>
